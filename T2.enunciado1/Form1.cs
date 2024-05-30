@@ -60,7 +60,7 @@ namespace T2.enunciado1
                     contadormascotas++;
 
 
-                    MessageBox.Show("Estimad@ " +" su mascota fue registrada!!!");
+                    MessageBox.Show("Estimad@ "+ textNomb.Text+" su mascota fue registrada!!!");
 
 
                     txtnmasc.Clear();
