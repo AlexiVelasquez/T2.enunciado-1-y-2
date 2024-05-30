@@ -56,6 +56,11 @@ namespace T2.enunciado1
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
