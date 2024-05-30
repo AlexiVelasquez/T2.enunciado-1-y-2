@@ -246,6 +246,7 @@
             this.comboboxdueños.Name = "comboboxdueños";
             this.comboboxdueños.Size = new System.Drawing.Size(156, 24);
             this.comboboxdueños.TabIndex = 4;
+            this.comboboxdueños.Text = "Escoger dueño";
             this.comboboxdueños.SelectedIndexChanged += new System.EventHandler(this.Listadueños_SelectedIndexChanged);
             // 
             // label8

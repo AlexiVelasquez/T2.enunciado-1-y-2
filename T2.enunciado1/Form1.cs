@@ -25,12 +25,13 @@ namespace T2.enunciado1
         public int[] G18_edadmascota = new int[G18_totalmascotas];
         public string[] G18_razamascota = new string[G18_totalmascotas];
         public string[] G18_dueñomascota = new string[G18_totalmascotas];
+
+
+
+
         public Form1()
         {
-
             InitializeComponent();
-
-
         }
 
         private void Listadueños_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,11 +93,6 @@ namespace T2.enunciado1
             }
 
 
-        }
-
-        private void comboboxdueños_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
 
 
         }
@@ -105,7 +101,11 @@ namespace T2.enunciado1
         {
 
         }
-    }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 }
