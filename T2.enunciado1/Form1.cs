@@ -16,6 +16,7 @@ namespace T2.enunciado1
         public static int G18_totaldueño = 100;
         public static int G18_totalmascotas = 100;
         private int contadorDueños = 0;
+        private int contadormascotas = 0;
 
         public static string[] G18_nombredueño = new string[G18_totaldueño];
         public string[] G18_direcciondueño = new string[G18_totaldueño];
@@ -29,9 +30,12 @@ namespace T2.enunciado1
 
 
 
+
         public Form1()
         {
             InitializeComponent();
+            
+
         }
 
         private void Listadueños_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,6 +48,35 @@ namespace T2.enunciado1
         private void button2_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                if (contadormascotas < G18_totalmascotas)
+                {
+
+                    G18_nombremascota[contadormascotas] = txtnmasc.Text;
+                    G18_edadmascota[contadormascotas] = int.Parse(txtedMas.Text);
+                    G18_razamascota[contadormascotas] = txtrazMasc.Text;
+
+                    contadormascotas++;
+
+
+                    MessageBox.Show("Estimad@ " +" su mascota fue registrada!!!");
+
+
+                    txtnmasc.Clear();
+                    txtedMas.Clear();
+                    txtrazMasc.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Se ha alcanzado el número máximo de Mascotas registradas.");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error: Debes ingresar datos válidos. ");
+            }
+         
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -58,7 +91,6 @@ namespace T2.enunciado1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (contadorDueños < G18_totaldueño)
@@ -75,7 +107,7 @@ namespace T2.enunciado1
                     contadorDueños++;
 
 
-                    MessageBox.Show(textNomb.Text + " fue registrado!!!");
+                    MessageBox.Show("Estimad@ "+textNomb.Text + " usted acaba de registrarse");
 
 
                     textNomb.Clear();
@@ -104,6 +136,38 @@ namespace T2.enunciado1
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void botonbuscarmascota_Click(object sender, EventArgs e)
+        {
+            string nombreMascota = txtBuscarMascota.Text;
+            int indiceMascota = -1;
+
+            for (int i = 0; i < contadormascotas; i++)
+            {
+                if (G18_nombremascota[i] == nombreMascota)
+                {
+                    indiceMascota = i;
+                    break;
+                }
+            }
+
+            if (indiceMascota != -1)
+            {
+                string nombreDueño = G18_nombredueño[indiceMascota];
+
+                labelInfoMascota.Text = "Nombre de la Mascota: " + G18_nombremascota[indiceMascota] + "\n" +
+                                         "Edad: " + G18_edadmascota[indiceMascota] + "\n" +
+                                         "Raza: " + G18_razamascota[indiceMascota] + "\n" +
+                                         "Dueño: " + nombreDueño + "\n" +
+                                         "Dirección del Dueño: " + G18_direcciondueño[indiceMascota] + "\n" +
+                                         "Teléfono del Dueño: " + G18_telefonodueño[indiceMascota];
+            }
+            else
+            {
+                labelInfoMascota.Text = "Mascota no encontrada.";
+            }
 
         }
     }

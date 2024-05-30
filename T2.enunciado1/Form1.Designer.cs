@@ -50,9 +50,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtbuscarMasc = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.botonbuscarmascota = new System.Windows.Forms.Button();
+            this.txtBuscarMascota = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.labelInfoMascota = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -291,8 +292,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.txtbuscarMasc);
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.labelInfoMascota);
+            this.tabPage3.Controls.Add(this.botonbuscarmascota);
+            this.tabPage3.Controls.Add(this.txtBuscarMascota);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -302,23 +304,24 @@
             this.tabPage3.Text = "Buscar Mascota:";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // txtbuscarMasc
+            // botonbuscarmascota
             // 
-            this.txtbuscarMasc.Location = new System.Drawing.Point(371, 48);
-            this.txtbuscarMasc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtbuscarMasc.Name = "txtbuscarMasc";
-            this.txtbuscarMasc.Size = new System.Drawing.Size(99, 46);
-            this.txtbuscarMasc.TabIndex = 2;
-            this.txtbuscarMasc.Text = "Buscar";
-            this.txtbuscarMasc.UseVisualStyleBackColor = true;
+            this.botonbuscarmascota.Location = new System.Drawing.Point(371, 48);
+            this.botonbuscarmascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.botonbuscarmascota.Name = "botonbuscarmascota";
+            this.botonbuscarmascota.Size = new System.Drawing.Size(99, 46);
+            this.botonbuscarmascota.TabIndex = 2;
+            this.botonbuscarmascota.Text = "Buscar";
+            this.botonbuscarmascota.UseVisualStyleBackColor = true;
+            this.botonbuscarmascota.Click += new System.EventHandler(this.botonbuscarmascota_Click);
             // 
-            // textBox1
+            // txtBuscarMascota
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtBuscarMascota.Location = new System.Drawing.Point(163, 59);
+            this.txtBuscarMascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarMascota.Name = "txtBuscarMascota";
+            this.txtBuscarMascota.Size = new System.Drawing.Size(188, 22);
+            this.txtBuscarMascota.TabIndex = 1;
             // 
             // label10
             // 
@@ -328,6 +331,14 @@
             this.label10.Size = new System.Drawing.Size(221, 59);
             this.label10.TabIndex = 0;
             this.label10.Text = "Ingrese el nombre la Mascota:";
+            // 
+            // labelInfoMascota
+            // 
+            this.labelInfoMascota.Font = new System.Drawing.Font("Eras Medium ITC", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoMascota.Location = new System.Drawing.Point(50, 117);
+            this.labelInfoMascota.Name = "labelInfoMascota";
+            this.labelInfoMascota.Size = new System.Drawing.Size(568, 207);
+            this.labelInfoMascota.TabIndex = 3;
             // 
             // Form1
             // 
@@ -374,9 +385,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button txtbuscarMasc;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button botonbuscarmascota;
+        private System.Windows.Forms.TextBox txtBuscarMascota;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelInfoMascota;
     }
 }
 
