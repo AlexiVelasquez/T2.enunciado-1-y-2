@@ -92,7 +92,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleGreen;
+            this.button1.BackColor = System.Drawing.Color.OliveDrab;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(157, 274);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
