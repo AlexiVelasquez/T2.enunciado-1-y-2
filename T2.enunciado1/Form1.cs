@@ -13,21 +13,24 @@ namespace T2.enunciado1
 {
     public partial class Form1 : Form
     {
-            public string G18_NombreDueño { get; set; }
-            public string G18_Direccion { get; set; }
-            public int G18_Telefono { get; set; }
-            public string G18_Nombremascota { get; set; }
-            public int  G18_Edadmascota { get; set; }
-            public string G18_Razamascota { get; set; }
-            public string G18_Dueñomascota { get; set; }
-        
-           
+        public static int G18_totaldueño = 100;
+        public static int G18_totalmascotas = 100;
+        private int contadorDueños = 0;
 
+        public static string[] G18_nombredueño = new string[G18_totaldueño];
+        public string[] G18_direcciondueño = new string[G18_totaldueño];
+        public int[] G18_telefonodueño = new int[G18_totaldueño];
 
-
+        public string[] G18_nombremascota = new string[G18_totalmascotas];
+        public int[] G18_edadmascota = new int[G18_totalmascotas];
+        public string[] G18_razamascota = new string[G18_totalmascotas];
+        public string[] G18_dueñomascota = new string[G18_totalmascotas];
         public Form1()
         {
+
             InitializeComponent();
+
+
         }
 
         private void Listadueños_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,6 +58,47 @@ namespace T2.enunciado1
         private void button1_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                if (contadorDueños < G18_totaldueño)
+                {
+
+                    G18_nombredueño[contadorDueños] = textNomb.Text;
+                    G18_direcciondueño[contadorDueños] = textDirec.Text;
+                    G18_telefonodueño[contadorDueños] = int.Parse(textTelef.Text);
+
+
+                    comboboxdueños.Items.Add(textNomb.Text);
+
+
+                    contadorDueños++;
+
+
+                    MessageBox.Show(textNomb.Text + " fue registrado!!!");
+
+
+                    textNomb.Clear();
+                    textDirec.Clear();
+                    textTelef.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Se ha alcanzado el número máximo de dueños registrados.");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error: Debes ingresar datos válidos. ");
+            }
+
+
+        }
+
+        private void comboboxdueños_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,5 +106,6 @@ namespace T2.enunciado1
 
         }
     }
+
 
 }
