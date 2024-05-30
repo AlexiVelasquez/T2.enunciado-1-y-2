@@ -13,6 +13,17 @@ namespace T2.enunciado1
 {
     public partial class Form1 : Form
     {
+            public string G18_NombreDueño { get; set; }
+            public string G18_Direccion { get; set; }
+            public int G18_Telefono { get; set; }
+            public string G18_Nombremascota { get; set; }
+            public int  G18_Edadmascota { get; set; }
+            public string G18_Razamascota { get; set; }
+            public string G18_Dueñomascota { get; set; }
+        
+           
+
+
 
         public Form1()
         {
