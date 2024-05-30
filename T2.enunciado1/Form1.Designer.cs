@@ -53,6 +53,7 @@
             this.txtbuscarMasc = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.textTelef);
             this.tabPage1.Controls.Add(this.textDirec);
@@ -327,6 +329,16 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Ingrese el nombre la Mascota:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(433, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 20);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Nombre:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,6 +386,7 @@
         private System.Windows.Forms.Button txtbuscarMasc;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 
