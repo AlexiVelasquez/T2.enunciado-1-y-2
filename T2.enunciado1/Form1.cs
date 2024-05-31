@@ -154,31 +154,40 @@ namespace T2.enunciado1
 
         private void botonbuscarmascota_Click(object sender, EventArgs e)
         {
+            // Obtener el nombre de la mascota ingresado por el usuario
             string nombreMascota = txtBuscarMascota.Text;
+
+            // Variable para almacenar el índice de la mascota encontrada
             int indiceMascota = -1;
 
+            // Recorrer el arreglo de nombres de mascotas para buscar la coincidencia
             for (int i = 0; i < contadormascotas; i++)
             {
                 if (G18_nombremascota[i] == nombreMascota)
                 {
+                    // Si se encuentra la mascota, guardar el índice y salir del ciclo
                     indiceMascota = i;
                     break;
                 }
             }
 
+            // Verificar si se encontró la mascota
             if (indiceMascota != -1)
             {
+                // Obtener el nombre del dueño de la mascota utilizando el índice encontrado
                 string nombreDueño = G18_nombredueño[indiceMascota];
 
+                // Mostrar la información de la mascota en el label
                 labelInfoMascota.Text = "Nombre de la Mascota: " + G18_nombremascota[indiceMascota] + "\n" +
-                                         "Edad: " + G18_edadmascota[indiceMascota] + "\n" +
-                                         "Raza: " + G18_razamascota[indiceMascota] + "\n" +
-                                         "Dueño: " + nombreDueño + "\n" +
-                                         "Dirección del Dueño: " + G18_direcciondueño[indiceMascota] + "\n" +
-                                         "Teléfono del Dueño: " + G18_telefonodueño[indiceMascota];
+                                        "Edad: " + G18_edadmascota[indiceMascota] + "\n" +
+                                        "Raza: " + G18_razamascota[indiceMascota] + "\n" +
+                                        "Dueño: " + nombreDueño + "\n" +
+                                        "Dirección del Dueño: " + G18_direcciondueño[indiceMascota] + "\n" +
+                                        "Teléfono del Dueño: " + G18_telefonodueño[indiceMascota];
             }
             else
             {
+                // Si no se encontró la mascota, mostrar un mensaje indicando que no se encontró
                 labelInfoMascota.Text = "Mascota no encontrada.";
             }
 
