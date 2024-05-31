@@ -79,6 +79,7 @@ namespace T2.enunciado1
             }
             catch (Exception)
             {
+                //Mensaje de error por si se ingresan datos inválidos
                 MessageBox.Show("Error: Debes ingresar datos válidos. ");
             }
          
@@ -106,7 +107,7 @@ namespace T2.enunciado1
                     G18_direcciondueño[contadorDueños] = textDirec.Text;
                     G18_telefonodueño[contadorDueños] = int.Parse(textTelef.Text);
 
-
+                    //Actualización del combobox con el nombre del nuevo dueño
                     comboboxdueños.Items.Add(textNomb.Text);
 
                     //Se le agrega un espacio mas para que pase a la siguiente posición
@@ -132,6 +133,7 @@ namespace T2.enunciado1
             }
             catch (Exception)
             {
+                //Manejo de excepciones en caso de datos inválidos
                 MessageBox.Show("Error: Debes ingresar datos válidos. ");
             }
 
