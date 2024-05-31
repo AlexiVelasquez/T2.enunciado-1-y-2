@@ -13,15 +13,19 @@ namespace T2.enunciado1
 {
     public partial class Form1 : Form
     {
-        public static int G18_totaldueño = 100;
-        public static int G18_totalmascotas = 100;
+        //Variables públicas con valores máximos para dueños y mascotas
+        public static int G18_totaldueño = 100; //max = 100
+        public static int G18_totalmascotas = 100; //max = 100
+        //Contadores para llevar el registro de dueños y mascotas registradas
         private int contadorDueños = 0;
         private int contadormascotas = 0;
 
+        //Arreglos para almacenar los datos del dueño
         public static string[] G18_nombredueño = new string[G18_totaldueño];
         public string[] G18_direcciondueño = new string[G18_totaldueño];
         public int[] G18_telefonodueño = new int[G18_totaldueño];
 
+        //Arreglos para almacenar los datos de la mascota
         public string[] G18_nombremascota = new string[G18_totalmascotas];
         public int[] G18_edadmascota = new int[G18_totalmascotas];
         public string[] G18_razamascota = new string[G18_totalmascotas];
@@ -50,19 +54,20 @@ namespace T2.enunciado1
 
             try
             {
-                if (contadormascotas < G18_totalmascotas)
+                if (contadormascotas < G18_totalmascotas) //Se usa el if para verificar si hay espacio para registrar otra mascota
                 {
-
+                    //Se almacena los datos de la mascota
                     G18_nombremascota[contadormascotas] = txtnmasc.Text;
                     G18_edadmascota[contadormascotas] = int.Parse(txtedMas.Text);
                     G18_razamascota[contadormascotas] = txtrazMasc.Text;
 
+                    //Se incrementa el contador de mascotas registradas
                     contadormascotas++;
 
-
+                    //Mensaje de confirmacion del registro
                     MessageBox.Show("Estimad@ "+ textNomb.Text+" su mascota fue registrada!!!");
 
-
+                    //Se limpian los espacios utilizados
                     txtnmasc.Clear();
                     txtedMas.Clear();
                     txtrazMasc.Clear();
@@ -96,6 +101,7 @@ namespace T2.enunciado1
                 if (contadorDueños < G18_totaldueño)
                 {
 
+                    //Usamos los arrays e inicializamos en la posicion 0 = contadorDueños
                     G18_nombredueño[contadorDueños] = textNomb.Text;
                     G18_direcciondueño[contadorDueños] = textDirec.Text;
                     G18_telefonodueño[contadorDueños] = int.Parse(textTelef.Text);
@@ -103,19 +109,24 @@ namespace T2.enunciado1
 
                     comboboxdueños.Items.Add(textNomb.Text);
 
-
+                    //Se le agrega un espacio mas para que pase a la siguiente posición
                     contadorDueños++;
 
 
+                   //Se presenta un messagebox indicando que el registro fue exitoso
                     MessageBox.Show("Estimad@ "+textNomb.Text + " usted acaba de registrarse");
 
 
+                    //Limpiamos los espacios utilizados
+                    //para que despues del registro, se pueda seguir utilizando
                     textNomb.Clear();
                     textDirec.Clear();
                     textTelef.Clear();
                 }
                 else
                 {
+                    //Gracias al If, en caso que el número ingresado pase la cantidad de espacios
+                    //establecidos en los arreglos, se presentara el siguiente mensaje
                     MessageBox.Show("Se ha alcanzado el número máximo de dueños registrados.");
                 }
             }
