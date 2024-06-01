@@ -12,6 +12,26 @@ namespace T2enunciado2
 {
     public partial class Form2 : Form
     {
+        //declaracion del numero
+        int[] numeroLista;
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            numeroLista = new int[dataGridView1.RowCount - 1];
+
+            for (int i = 0; i < dataGridView1.RowCount - 1; i = i + 1)
+            {
+                numeroLista[i] = int.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
+            }
+
+            txtArray.Text = "";
+            for (int i = 0; i < numeroLista.Count(); i = i + 1)
+            {
+                txtArray.Text = txtArray.Text + ", " + numeroLista[i].ToString();
+            }
+        }
+
+
         public Form2()
         {
             InitializeComponent();
@@ -69,11 +89,15 @@ namespace T2enunciado2
             return numero;
         }
 
-
-
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            int[] numeroResultado = OrdenamientoDesc(numeroLista);
+
+            txtDesc.Text = "";
+            for (int i = 0; i < numeroResultado.Count(); i = i + 1)
+            {
+                txtDesc.Text = txtDesc.Text + ", " + numeroResultado[i].ToString();
+            }
         }
 
         //Ordenamiento Descendente
@@ -100,25 +124,6 @@ namespace T2enunciado2
         }
 
 
-
-        //declaracion del numero
-        int[] numeroLista;
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            numeroLista = new int[dataGridView1.RowCount -1];
-
-            for (int i = 0; i < dataGridView1.RowCount - 1; i = i + 1)
-            {
-                numeroLista[i] = int.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
-            }
-
-            txtArray.Text = "";
-            for (int i = 0; i < numeroLista.Count() ; i = i + 1)
-            {
-                txtArray.Text = txtArray.Text + ", " + numeroLista[i].ToString();
-            }
-        }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
