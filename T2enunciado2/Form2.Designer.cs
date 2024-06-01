@@ -95,7 +95,7 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(269, 330);
+            this.txtDesc.Location = new System.Drawing.Point(302, 330);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(183, 20);
             this.txtDesc.TabIndex = 5;
