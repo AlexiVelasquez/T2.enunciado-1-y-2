@@ -102,7 +102,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(244, 31);
+            this.button3.Location = new System.Drawing.Point(249, 31);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 54);
             this.button3.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // txtArray
             // 
-            this.txtArray.Location = new System.Drawing.Point(366, 49);
+            this.txtArray.Location = new System.Drawing.Point(374, 45);
             this.txtArray.Name = "txtArray";
             this.txtArray.Size = new System.Drawing.Size(183, 20);
             this.txtArray.TabIndex = 7;
