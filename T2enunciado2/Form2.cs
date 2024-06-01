@@ -94,5 +94,10 @@ namespace T2enunciado2
                 txtArray.Text = txtArray.Text + ", " + numeroLista[i].ToString();
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
