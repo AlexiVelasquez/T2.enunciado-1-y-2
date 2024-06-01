@@ -101,7 +101,7 @@ namespace T2.enunciado1
             {
                 if (contadorDueños < G18_totaldueño)
                 {
-
+                    //
                     //Usamos los arrays e inicializamos en la posicion 0 = contadorDueños
                     G18_nombredueño[contadorDueños] = textNomb.Text;
                     G18_direcciondueño[contadorDueños] = textDirec.Text;
