@@ -91,6 +91,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Ordenar de forma descendente";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtDesc
             // 
