@@ -76,6 +76,10 @@ namespace T2enunciado2
             
         }
 
+        
+
+
+
         //declaracion del numero
         int[] numeroLista;
 
