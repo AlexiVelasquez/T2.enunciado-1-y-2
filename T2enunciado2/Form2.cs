@@ -76,7 +76,28 @@ namespace T2enunciado2
             
         }
 
-        
+        //Ordenamiento Descendente
+
+        public int[] OrdenamientoDesc(int[] numero)
+        {
+            int aux;
+            for (int i = 0; i < numero.Length; i++)
+            {
+                for (int x = 0; x < numero.Length; x = x + 1)
+
+                    for (int j = 0; j < numero.Length - i - 1; j++)
+                    {
+                        if (numero[j] < numero[j + 1])
+                        {
+                            aux = numero[j + 1];
+                            numero[j + 1] = numero[j];
+                            numero[j] = aux;
+                        }
+                    }
+            }
+
+            return numero;
+        }
 
 
 
