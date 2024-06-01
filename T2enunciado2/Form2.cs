@@ -36,7 +36,7 @@ namespace T2enunciado2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int[] numeroResultado = Ordenamiento(numeroLista);
+            int[] numeroResultado = OrdenamientoAsc(numeroLista);
 
             txtAsc.Text = "";
             for (int i = 0; i < numeroResultado.Count(); i = i + 1)
@@ -46,9 +46,9 @@ namespace T2enunciado2
 
         }
 
-        //Ordenamiento
+        //Ordenamiento Ascendente
 
-        public int[] Ordenamiento(int[] numero)
+        public int[] OrdenamientoAsc(int[] numero)
         {
             int aux;
             for (int i = 0; i < numero.Length; i++)
@@ -73,7 +73,7 @@ namespace T2enunciado2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //declaracion del numero
