@@ -42,7 +42,7 @@
             // 
             // txtAsc
             // 
-            this.txtAsc.Location = new System.Drawing.Point(290, 203);
+            this.txtAsc.Location = new System.Drawing.Point(269, 200);
             this.txtAsc.Name = "txtAsc";
             this.txtAsc.Size = new System.Drawing.Size(183, 20);
             this.txtAsc.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(302, 121);
+            this.button1.Location = new System.Drawing.Point(302, 117);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 62);
             this.button1.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(290, 330);
+            this.txtDesc.Location = new System.Drawing.Point(269, 330);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(183, 20);
             this.txtDesc.TabIndex = 5;
