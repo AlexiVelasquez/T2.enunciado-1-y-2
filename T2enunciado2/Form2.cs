@@ -131,12 +131,13 @@ namespace T2enunciado2
 
         }
 
+        //Buscar número ingresado
         private void button4_Click(object sender, EventArgs e)
         {
             txtBusq.Text = BusquedaNumero(numeroLista, int.Parse(txtBusq.Text)).ToString();
         }
 
-        //Búsqueda de número ingresado en el array
+        //Método para búsqueda de número ingresado en el array
         public int BusquedaNumero(int[] numeroLista, int ValorBuscado)
         {
             for (int i = 0; i < numeroLista.Length; i++)
@@ -154,11 +155,12 @@ namespace T2enunciado2
             return ValorBuscado;
         }
 
+        //Eliminar número igresado
         private void button5_Click(object sender, EventArgs e)
         {
-            int numeroEliminar;
+            int G18_numeroEliminar;
 
-            if (!int.TryParse(txtBusq.Text, out numeroEliminar))
+            if (!int.TryParse(txtBusq.Text, out G18_numeroEliminar))
             {
                 MessageBox.Show("Ingrese un número válido.");
                 return;
@@ -166,17 +168,17 @@ namespace T2enunciado2
             bool encontrado = false;
             for (int i = 0; i < numeroLista.Length; i++)
             {
-                if (numeroLista[i] == numeroEliminar)
+                if (numeroLista[i] == G18_numeroEliminar)
                 {
                     encontrado = true;
-
+                    //Si el número ingresado se encuentra en el array, procede a eliminarse
                     for (int j = i; j < numeroLista.Length - 1; j++)
                     {
                         numeroLista[j] = numeroLista[j + 1];
                     }
-
+                    //Se redimensiona el array luego de eliminar el número ingresado
                     Array.Resize(ref numeroLista, numeroLista.Length - 1);
-                    MessageBox.Show($"El número {numeroEliminar} ha sido eliminado de la lista.");
+                    MessageBox.Show($"El número {G18_numeroEliminar} ha sido eliminado de la lista.");
 
                     break;
                 }
@@ -184,12 +186,13 @@ namespace T2enunciado2
 
             if (!encontrado)
             {
-                MessageBox.Show($"El número {numeroEliminar} no se encontró en la lista.");
+                MessageBox.Show($"El número {G18_numeroEliminar} no se encontró en la lista.");
             }
 
             MostrarListaActualizada();
         }
 
+        //Método para actualizar la lista luego de eliminar el número ingresado
         private void MostrarListaActualizada()
         {
             txtArray.Text = string.Join(", ", numeroLista);
