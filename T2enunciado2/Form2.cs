@@ -135,18 +135,28 @@ namespace T2enunciado2
         {
             txtBusq.Text = BusquedaNumero(numeroLista, int.Parse(txtBusq.Text)).ToString();
         }
+
+        //Búsqueda de número ingresado en el array
         public int BusquedaNumero(int[] numeroLista, int ValorBuscado)
         {
             for (int i = 0; i < numeroLista.Length; i++)
             {
+                //Si el número ingresado se encuentra en el array, se mostrará una ventana indicando que fue encontrado
                 if (numeroLista[i] == ValorBuscado)
                 {
                     MessageBox.Show("Número encontrado");
                     return ValorBuscado;  
                 }
+               
+                //Si el número ingresado no se encuentra en el array, se mostrará una ventana indicando que no fue encontrado
             }
             MessageBox.Show("Número no encontrado");
             return ValorBuscado;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
    

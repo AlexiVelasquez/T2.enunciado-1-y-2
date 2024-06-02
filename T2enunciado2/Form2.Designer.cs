@@ -162,6 +162,7 @@
             this.button5.TabIndex = 3;
             this.button5.Text = "Eliminar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
