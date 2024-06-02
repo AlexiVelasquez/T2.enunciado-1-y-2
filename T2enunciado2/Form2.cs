@@ -145,9 +145,9 @@ namespace T2enunciado2
                 if (numeroLista[i] == ValorBuscado)
                 {
                     MessageBox.Show("Número encontrado");
-                    return ValorBuscado;  
+                    return ValorBuscado;
                 }
-               
+
                 //Si el número ingresado no se encuentra en el array, se mostrará una ventana indicando que no fue encontrado
             }
             MessageBox.Show("Número no encontrado");
@@ -156,8 +156,44 @@ namespace T2enunciado2
 
         private void button5_Click(object sender, EventArgs e)
         {
+            int numeroEliminar;
 
+            if (!int.TryParse(txtBusq.Text, out numeroEliminar))
+            {
+                MessageBox.Show("Ingrese un número válido.");
+                return;
+            }
+            bool encontrado = false;
+            for (int i = 0; i < numeroLista.Length; i++)
+            {
+                if (numeroLista[i] == numeroEliminar)
+                {
+                    encontrado = true;
+
+                    for (int j = i; j < numeroLista.Length - 1; j++)
+                    {
+                        numeroLista[j] = numeroLista[j + 1];
+                    }
+
+                    Array.Resize(ref numeroLista, numeroLista.Length - 1);
+                    MessageBox.Show($"El número {numeroEliminar} ha sido eliminado de la lista.");
+
+                    break;
+                }
+            }
+
+            if (!encontrado)
+            {
+                MessageBox.Show($"El número {numeroEliminar} no se encontró en la lista.");
+            }
+
+            MostrarListaActualizada();
+        }
+
+        private void MostrarListaActualizada()
+        {
+            txtArray.Text = string.Join(", ", numeroLista);
         }
     }
-   
-}
+ }
+    
