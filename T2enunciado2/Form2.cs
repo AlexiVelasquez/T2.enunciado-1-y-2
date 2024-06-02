@@ -15,6 +15,7 @@ namespace T2enunciado2
         //declaracion del numero
         int[] numeroLista;
 
+
         private void button3_Click(object sender, EventArgs e)
         {
             numeroLista = new int[dataGridView1.RowCount - 1];
@@ -52,7 +53,7 @@ namespace T2enunciado2
 
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -73,17 +74,17 @@ namespace T2enunciado2
             int aux;
             for (int i = 0; i < numero.Length; i++)
             {
-                for (int x = 0; x < numero.Length; x = x + 1) 
+                for (int x = 0; x < numero.Length; x = x + 1)
 
-                for (int j = 0; j < numero.Length - i - 1; j++)
-                {
-                     if (numero[j] > numero[j + 1])
-                     {
+                    for (int j = 0; j < numero.Length - i - 1; j++)
+                    {
+                        if (numero[j] > numero[j + 1])
+                        {
                             aux = numero[j + 1];
                             numero[j + 1] = numero[j];
                             numero[j] = aux;
-                     }
-                }    
+                        }
+                    }
             }
 
             return numero;
@@ -129,5 +130,24 @@ namespace T2enunciado2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txtBusq.Text = BusquedaNumero(numeroLista, int.Parse(txtBusq.Text)).ToString();
+        }
+        public int BusquedaNumero(int[] numeroLista, int ValorBuscado)
+        {
+            for (int i = 0; i < numeroLista.Length; i++)
+            {
+                if (numeroLista[i] == ValorBuscado)
+                {
+                    MessageBox.Show("Número encontrado");
+                    return ValorBuscado;  
+                }
+            }
+            MessageBox.Show("Número no encontrado");
+            return ValorBuscado;
+        }
     }
+   
 }
